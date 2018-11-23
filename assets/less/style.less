@@ -1,0 +1,51 @@
+@baseColor: lightgreen;
+@accentColor: lightgrey;
+
+@textSize: 10px;
+@titleSize: 20px;
+
+.no-padding-margin {
+  margin: 0;
+  padding: 0;
+}
+.base-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  .no-padding-margin();
+}
+.choice-container {
+  .base-flex();
+  img {
+    height: 100px;
+    &:hover {
+      cursor: pointer;
+      background-color: yellow;
+    }
+  }
+}
+.form-container {
+  border: 1px solid @baseColor;
+  height: 25vh;
+  .base-flex();
+  flex-direction: column;
+  input {
+    width: 200px;
+    .no-padding-margin();
+    &[type='submit'] {
+      .no-padding-margin();
+    }
+  }
+}
+.game-container {
+  border: 1px solid @baseColor;
+  height: 50vh;
+  text-align: center;
+}
+.player-history-container {
+  border: 1px solid @baseColor;
+  height: 25vh;
+}
